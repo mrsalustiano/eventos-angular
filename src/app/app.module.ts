@@ -20,8 +20,10 @@ import { EspetaculoSalvarComponent } from './components/Espetaculo/espetaculo-sa
 import { VendaSalvarComponent } from './components/Venda/venda-salvar/venda-salvar.component';
 import { VendaListarComponent } from './components/Venda/venda-listar/venda-listar.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { IndexComponent } from './components/admin/index/index.component';
 
 const routes: Routes = [
+  {path: 'admin/index', component: IndexComponent},
   {path: '', redirectTo: '/' , pathMatch: 'full' },
   {path: '**', redirectTo: '/' , pathMatch: 'full'}
   
@@ -44,7 +46,8 @@ const routes: Routes = [
     EspetaculoListarComponent,
     EspetaculoSalvarComponent,
     VendaSalvarComponent,
-    VendaListarComponent
+    VendaListarComponent,
+    IndexComponent
   ],
   imports: [
     RouterModule.forRoot(routes),
